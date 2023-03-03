@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.start = new System.Windows.Forms.Button();
-            this.stop = new System.Windows.Forms.Button();
             this.reset = new System.Windows.Forms.Button();
             this.TimeLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -41,7 +40,7 @@
             // start
             // 
             this.start.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.start.Location = new System.Drawing.Point(108, 243);
+            this.start.Location = new System.Drawing.Point(199, 243);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(183, 72);
             this.start.TabIndex = 0;
@@ -49,21 +48,10 @@
             this.start.UseVisualStyleBackColor = true;
             this.start.Click += new System.EventHandler(this.start_Click);
             // 
-            // stop
-            // 
-            this.stop.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.stop.Location = new System.Drawing.Point(286, 243);
-            this.stop.Name = "stop";
-            this.stop.Size = new System.Drawing.Size(183, 72);
-            this.stop.TabIndex = 2;
-            this.stop.Text = "Stop";
-            this.stop.UseVisualStyleBackColor = true;
-            this.stop.Click += new System.EventHandler(this.stop_Click);
-            // 
             // reset
             // 
             this.reset.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.reset.Location = new System.Drawing.Point(466, 243);
+            this.reset.Location = new System.Drawing.Point(388, 243);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(183, 72);
             this.reset.TabIndex = 3;
@@ -74,10 +62,10 @@
             // TimeLabel
             // 
             this.TimeLabel.AutoSize = true;
-            this.TimeLabel.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TimeLabel.Location = new System.Drawing.Point(108, 112);
+            this.TimeLabel.Font = new System.Drawing.Font("Tempus Sans ITC", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TimeLabel.Location = new System.Drawing.Point(81, 114);
             this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(572, 128);
+            this.TimeLabel.Size = new System.Drawing.Size(648, 126);
             this.TimeLabel.TabIndex = 4;
             this.TimeLabel.Text = "00:00:00:00";
             // 
@@ -100,7 +88,7 @@
             // save
             // 
             this.save.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.save.Location = new System.Drawing.Point(377, 321);
+            this.save.Location = new System.Drawing.Point(388, 321);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(183, 72);
             this.save.TabIndex = 6;
@@ -117,10 +105,10 @@
             this.Controls.Add(this.loadButton);
             this.Controls.Add(this.TimeLabel);
             this.Controls.Add(this.reset);
-            this.Controls.Add(this.stop);
             this.Controls.Add(this.start);
             this.Name = "Form1";
             this.Text = "Application";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,7 +117,6 @@
         #endregion
 
         private Button start;
-        private Button stop;
         private Button reset;
         private Label TimeLabel;
         private System.Windows.Forms.Timer timer1;

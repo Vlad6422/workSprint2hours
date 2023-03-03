@@ -19,20 +19,29 @@ namespace TestAppl
         public LoadDialog()
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(46, 46, 46);
+            this.ForeColor = Color.White;
+            listBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            listBox1.BackColor = Color.White;
+            listBox1.SelectionMode = SelectionMode.MultiExtended;
+            listBox1.BorderStyle = BorderStyle.FixedSingle;
+
+           button1.BackColor = Color.FromArgb(52, 58, 64); // Set the background color to dark gray
+            button1.ForeColor = Color.White; // Set the text color to white
+            button1.Font = new Font("Segoe UI", 14, FontStyle.Bold); // Set the font to Segoe UI Bold 14pt
+            button1.FlatStyle = FlatStyle.Flat; // Set the button style to flat
+            button1.FlatAppearance.BorderSize = 0; // Set the border size to 0
             using (ApplicationContext db = new ApplicationContext())
             {
 
                 listBox1.DataSource = (from time in db.Times
-                                       select time.Name).ToList();
+                                       select time.Name +"  -   "+ time.Time).ToList();
 
-                listBox2.DataSource = (from time in db.Times
-                                       select time.Time).ToList();
+                
 
             }
 
         }
-        public string tmp { get { return listBox2.SelectedItem.ToString(); } }
-
         private void button1_Click(object sender, EventArgs e)
         {
            this.Close();
