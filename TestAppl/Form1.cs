@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 namespace TestAppl
 {
+   
     public partial class Form1 : Form
     {
         private Stopwatch Stopwatch;
@@ -40,11 +41,18 @@ namespace TestAppl
         private void reset_Click(object sender, EventArgs e)
         {
             Stopwatch.Reset();
+            start.Text = "Start";
+            start.BackColor = Color.FromArgb(0, 200, 81); // Set the background color to green
+            start.ForeColor = Color.White; // Set the text color to white
+            start.Font = new Font("Segoe UI", 14, FontStyle.Bold); // Set the font to Segoe UI Bold 14pt
+            start.FlatStyle = FlatStyle.Flat; // Set the button style to flat
+            start.FlatAppearance.BorderSize = 0; // Set the border size to 0
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             TimeLabel.Text = Stopwatch.Elapsed.ToString(@"hh\:mm\:ss\:ff");
+            
         }
 
         private void loadButton_Click(object sender, EventArgs e)
@@ -52,8 +60,6 @@ namespace TestAppl
             
                 var loadDialog = new LoadDialog();
             loadDialog.ShowDialog();
-            
-            
 
         }
 
@@ -75,6 +81,7 @@ namespace TestAppl
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            loadButton.Text = "Show Saved";
             this.Text = "Stopwatch App";
             this.BackColor = Color.FromArgb(46, 46, 46);
             this.ForeColor = Color.White;

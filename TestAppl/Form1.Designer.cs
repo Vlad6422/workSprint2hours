@@ -39,6 +39,7 @@
             // 
             // start
             // 
+            this.start.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.start.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.start.Location = new System.Drawing.Point(199, 243);
             this.start.Name = "start";
@@ -50,6 +51,7 @@
             // 
             // reset
             // 
+            this.reset.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.reset.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.reset.Location = new System.Drawing.Point(388, 243);
             this.reset.Name = "reset";
@@ -61,6 +63,7 @@
             // 
             // TimeLabel
             // 
+            this.TimeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TimeLabel.AutoSize = true;
             this.TimeLabel.Font = new System.Drawing.Font("Tempus Sans ITC", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TimeLabel.Location = new System.Drawing.Point(81, 114);
@@ -76,6 +79,7 @@
             // 
             // loadButton
             // 
+            this.loadButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.loadButton.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.loadButton.Location = new System.Drawing.Point(199, 321);
             this.loadButton.Name = "loadButton";
@@ -87,6 +91,7 @@
             // 
             // save
             // 
+            this.save.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.save.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.save.Location = new System.Drawing.Point(388, 321);
             this.save.Name = "save";
