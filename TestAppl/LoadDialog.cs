@@ -19,19 +19,23 @@ namespace TestAppl
         public LoadDialog()
         {
             InitializeComponent();
+
             this.BackColor = Color.FromArgb(46, 46, 46);
             this.ForeColor = Color.White;
+            //
             listBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             listBox1.BackColor = Color.White;
             listBox1.SelectionMode = SelectionMode.MultiExtended;
             listBox1.BorderStyle = BorderStyle.FixedSingle;
-
-           button1.BackColor = Color.FromArgb(52, 58, 64); // Set the background color to dark gray
+            //
+            button1.BackColor = Color.FromArgb(52, 58, 64); // Set the background color to dark gray
             button1.ForeColor = Color.White; // Set the text color to white
             button1.Font = new Font("Segoe UI", 14, FontStyle.Bold); // Set the font to Segoe UI Bold 14pt
             button1.FlatStyle = FlatStyle.Flat; // Set the button style to flat
             button1.FlatAppearance.BorderSize = 0; // Set the border size to 0
-           button2.BackColor = Color.FromArgb(220, 53, 69); // Set the background color to red
+            //
+            button2.BackColor = Color.FromArgb(220, 53, 69); // Set the background color to red
+            button2.BackColor = Color.FromArgb(220, 53, 69); // Set the background color to red
             button2.ForeColor = Color.White; // Set the text color to white
             button2.Font = new Font("Segoe UI", 6, FontStyle.Bold); // Set the font to Segoe UI Bold 14pt
             button2.FlatStyle = FlatStyle.Flat; // Set the button style to flat
@@ -40,7 +44,6 @@ namespace TestAppl
             {
                 listBox1.DataSource = (from time in db.Times
                                        select time.Name +"  -   "+ time.Time).ToList();
- 
             }
 
         }

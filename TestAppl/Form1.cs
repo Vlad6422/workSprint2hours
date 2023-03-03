@@ -30,7 +30,7 @@ namespace TestAppl
             {
                 Stopwatch.Start();
                 start.Text = "Stop";
-               start.BackColor = Color.FromArgb(220, 53, 69); // Set the background color to red
+                start.BackColor = Color.FromArgb(220, 53, 69); // Set the background color to red
                 start.ForeColor = Color.White; // Set the text color to white
                 start.Font = new Font("Segoe UI", 14, FontStyle.Bold); // Set the font to Segoe UI Bold 14pt
                 start.FlatStyle = FlatStyle.Flat; // Set the button style to flat
@@ -52,13 +52,12 @@ namespace TestAppl
         private void timer1_Tick(object sender, EventArgs e)
         {
             TimeLabel.Text = Stopwatch.Elapsed.ToString(@"hh\:mm\:ss\:ff");
-            
         }
 
         private void loadButton_Click(object sender, EventArgs e)
         {
             
-                var loadDialog = new LoadDialog();
+            var loadDialog = new LoadDialog();
             loadDialog.ShowDialog();
 
         }
@@ -88,7 +87,7 @@ namespace TestAppl
             start.Text = "Start";
             start.BackColor = Color.FromArgb(41, 128, 185);
             start.ForeColor = Color.White;
-            
+            //
             reset.Text = "Reset";
             reset.BackColor = Color.FromArgb(192, 57, 43);
             reset.ForeColor = Color.White;
@@ -97,14 +96,14 @@ namespace TestAppl
             reset.Font = new Font("Segoe UI", 14, FontStyle.Bold); // Set the font to Segoe UI Bold 14pt
             reset.FlatStyle = FlatStyle.Flat; // Set the button style to flat
             reset.FlatAppearance.BorderSize = 0; // Set the border size to 0
-
-           save.BackColor = Color.FromArgb(52, 58, 64); // Set the background color to dark gray
+            //
+            save.BackColor = Color.FromArgb(52, 58, 64); // Set the background color to dark gray
             save.ForeColor = Color.White; // Set the text color to white
             save.Font = new Font("Segoe UI", 14, FontStyle.Bold); // Set the font to Segoe UI Bold 14pt
             save.FlatStyle = FlatStyle.Flat; // Set the button style to flat
             save.FlatAppearance.BorderSize = 0; // Set the border size to 0
-
-           loadButton.BackColor = Color.FromArgb(52, 58, 64); // Set the background color to dark gray
+            //
+            loadButton.BackColor = Color.FromArgb(52, 58, 64); // Set the background color to dark gray
             loadButton.ForeColor = Color.White; // Set the text color to white
             loadButton.Font = new Font("Segoe UI", 14, FontStyle.Bold); // Set the font to Segoe UI Bold 14pt
             loadButton.FlatStyle = FlatStyle.Flat; // Set the button style to flat
