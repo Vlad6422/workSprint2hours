@@ -14,7 +14,7 @@ namespace TestAppl
         public DbSet<TimeDb> Times { get; set; }
         public ApplicationContext()
         {
-            Database.EnsureDeleted(); //For 1st create. Then Delete this.
+           // Database.EnsureDeleted(); //For 1st create. Then Delete this.
             Database.EnsureCreated();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

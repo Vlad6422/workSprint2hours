@@ -4,17 +4,24 @@ namespace TestAppl
     public partial class Form1 : Form
     {
         private Stopwatch Stopwatch;
-        private string connectionString;
         public Form1()
         {
             InitializeComponent();
             Stopwatch = new Stopwatch();
-            connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\StopwatchData.mdf;Integrated Security=True";
         }
 
         private void start_Click(object sender, EventArgs e)
         {
-            Stopwatch.Start();
+            if (Stopwatch.IsRunning)
+            {
+                Stopwatch.Stop();
+                start.Text = "Start";
+            }
+            else
+            {
+                Stopwatch.Start();
+                start.Text = "Stop";
+            }
         }
 
         private void stop_Click(object sender, EventArgs e)
@@ -35,6 +42,11 @@ namespace TestAppl
 
         private void loadButton_Click(object sender, EventArgs e)
         {
+            
+                var loadDialog = new LoadDialog();
+            loadDialog.ShowDialog();
+            string tmp = loadDialog.tmp;
+            TimeLabel.Text = tmp;
 
         }
 
